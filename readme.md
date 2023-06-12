@@ -45,6 +45,7 @@ Definina uma forma de criar permissão para o usuario, defina se o usuário pode
 
 1 - instalar dependencias com o comando `npm install` </br>
 2 - rodar o comando `npm run dev`, para iniciar o servidor na porta 3000 padrão ou como configurada no ficheiro .env
+3 - Importar o ficheiro dentro da pasta src/.insomnia para o seu insomnia e testar os endpoints abaixo (Caso esteje a usar o insomnia ou baixar aqui https://insomnia.rest/download caso não tiver na sua máquina)
 
 ## testar os endpoints abaixo no seu cliente de preferência (insomnia/postman)
 
