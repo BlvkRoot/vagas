@@ -1,15 +1,13 @@
 import { injectable } from "tsyringe";
 import { users } from "..";
-import ErrorsApp from "../utils/ErrorsApp";
 import { UserDTO } from "../dto/UserDTO";
+import { BaseUserService } from "./BaseUserService";
 
 @injectable()
-export class ShowUserService {
+export class ShowUserService extends BaseUserService {
   async execute(name: string): Promise<UserDTO> {
-    const user = users.find((user) => user.name == name);
-
-    if (!user) throw new ErrorsApp("User not found", 400);
-
+    const user = this.getUserByName(name);
+    Object.assign(user, { viewCount: user.viewCount + 1});
     return user;
   }
 }

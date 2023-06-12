@@ -8,7 +8,7 @@ export class CreateUserService {
     const lastUser = users[users.length - 1];
     const newId = lastUser ? lastUser.id + 1 : 1;
     // Atualizar o user object e incrementar o id
-    Object.assign(user, { id: newId});
+    Object.assign(user, { id: newId, viewCount: 0 });
     users.push(user);
     return user;
   }
