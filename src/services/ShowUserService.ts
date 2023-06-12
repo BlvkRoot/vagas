@@ -1,7 +1,7 @@
 import { injectable } from "tsyringe";
 import { users } from "..";
 import ErrorsApp from "../utils/ErrorsApp";
-import { UserDTO } from "dto/UserDTO";
+import { UserDTO } from "../dto/UserDTO";
 
 @injectable()
 export class ShowUserService {

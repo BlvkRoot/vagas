@@ -7,9 +7,9 @@ export class ShowUserController {
     try {
       const name = request.query.name as string;
       const showUserService = container.resolve(ShowUserService);
-      const users = await showUserService.execute(name);
+      const user = await showUserService.execute(name);
       
-      return response.json(users);
+      return response.json(user);
     } catch (error) {
       return response.status(error.statusCode).json(error);
     }
