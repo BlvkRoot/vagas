@@ -54,3 +54,7 @@ Definina uma forma de criar permissão para o usuario, defina se o usuário pode
 `delete users/1` </br>
 `put users/1` </br>
 `get users/access` </br>
+`put users/permission/1` </br>
+  body => {
+    "permissions": ["can_update", "can_delete"]
+  }
