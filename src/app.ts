@@ -1,7 +1,15 @@
 import "reflect-metadata";
-import { app } from "./routes";
+import { userRoutes } from "./routes/userRoutes";
+import express from "express";
+const app = express();
 
-const port  = 3000;
-app.listen(port, function(){
-  console.log(`Express server listening on port ${port} 🚀 🚀`);
-});
+app.set("view engine", "jade");
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static(__dirname + "/public"));
+
+app.use(userRoutes);
+
+export { app };

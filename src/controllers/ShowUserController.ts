@@ -8,10 +8,10 @@ export class ShowUserController {
       const name = request.query.name as string;
       const showUserService = container.resolve(ShowUserService);
       const users = await showUserService.execute(name);
-
+      
       return response.json(users);
     } catch (error) {
-      return response.json(error);
+      return response.status(error.statusCode).json(error);
     }
   }
 }

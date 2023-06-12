@@ -8,7 +8,7 @@ export class ShowUserService {
   async execute(name: string): Promise<UserDTO> {
     const user = users.find((user) => user.name == name);
 
-    if (!user) throw new ErrorsApp("User not found");
+    if (!user) throw new ErrorsApp("User not found", 400);
 
     return user;
   }
