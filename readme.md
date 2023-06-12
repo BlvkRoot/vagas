@@ -53,3 +53,4 @@ Definina uma forma de criar permissão para o usuario, defina se o usuário pode
 `post users/` </br>
 `delete users/1` </br>
 `put users/1` </br>
+`get users/access` </br>
