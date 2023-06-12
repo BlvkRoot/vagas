@@ -5,7 +5,7 @@ import { container } from 'tsyringe';
 export class ShowUserController {
   async handle(request: Request, response: Response): Promise<Response> {
     try {
-      const name = request.params.name;
+      const name = request.query.name as string;
       const showUserService = container.resolve(ShowUserService);
       const users = await showUserService.execute(name);
 

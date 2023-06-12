@@ -13,7 +13,7 @@ userRoutes.get("/", function (req, res) {
   `);
 });
 
-userRoutes.get("/users/{name}", showUserController.handle);
+userRoutes.get("/users", showUserController.handle);
 // userRoutes.get("/users", teste1.getUsers);
 // userRoutes.post("/users", teste2);
 // userRoutes.delete("/users", teste3);
