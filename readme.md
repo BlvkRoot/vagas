@@ -41,3 +41,17 @@ Retorne quantas vezes determinado usuário foi lido no teste1.
 
 Definina uma forma de criar permissão para o usuario, defina se o usuário pode deletar ou atualizar usuários. Crie um middleware para validar essas permissões e adicione no teste4 e teste3.
 
+## como rodar o projeto
+
+1 - instalar dependencias com o comando `npm install` </br>
+2 - rodar o comando `npm run dev`, para iniciar o servidor na porta 3000 padrão ou como configurada no ficheiro .env
+
+## testar os endpoints abaixo no seu cliente de preferência (insomnia/postman)
+
+`
+  get user/
+  get users/
+  post users/
+  delete users/
+  put users
+`
