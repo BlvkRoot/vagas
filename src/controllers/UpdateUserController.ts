@@ -1,13 +1,14 @@
 import { Request, Response } from "express";
-import { ShowUserService } from "../services/ShowUserService";
+import { UpdateUserService } from "../services/UpdateUserService";
 import { container } from 'tsyringe';
 
-export class ShowUserController {
+export class UpdateUserController {
   async handle(request: Request, response: Response): Promise<Response> {
     try {
-      const name = request.query.name as string;
-      const showUserService = container.resolve(ShowUserService);
-      const user = await showUserService.execute(name);
+      const id = Number(request.params.id);
+      const data = request.body;
+      const updateUserService = container.resolve(UpdateUserService);
+      const user = await updateUserService.execute(id, data);
       
       return response.json(user);
     } catch (error) {
