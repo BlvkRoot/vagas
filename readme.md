@@ -48,10 +48,8 @@ Definina uma forma de criar permissão para o usuario, defina se o usuário pode
 
 ## testar os endpoints abaixo no seu cliente de preferência (insomnia/postman)
 
-`
-  get user/
-  get users/
-  post users/
-  delete users/
-  put users
-`
+`get user/`
+`get users/`
+`post users/`
+`delete users/1`
+`put users/1`

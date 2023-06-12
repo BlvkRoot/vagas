@@ -18,8 +18,8 @@ userRoutes.get("/", function (req, res) {
   res.send(`get user/ </br>
   get users/ </br>
   post users/ </br>
-  delete users/ </br>
-  put users/1 </br>
+  delete users/:id </br>
+  put users/:id </br>
   `);
 });
 
